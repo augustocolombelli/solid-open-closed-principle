@@ -1,15 +1,15 @@
-package project;
+package example.two;
 
 import java.util.List;
 
-import project.filter.FilterNumbers;
-import project.order.OrderNumbers;
+import example.two.filter.FilterNumbers;
+import example.two.order.OrderNumbers;
 
-public class NumberOrganizer {
+public class NumberOrganizerTwo {
 	private FilterNumbers filterNumber;
 	private OrderNumbers orderNumber;
 
-	public NumberOrganizer(FilterNumbers filterNumber, OrderNumbers orderNumber) {
+	public NumberOrganizerTwo(FilterNumbers filterNumber, OrderNumbers orderNumber) {
 		this.filterNumber = filterNumber;
 		this.orderNumber = orderNumber;
 	}
