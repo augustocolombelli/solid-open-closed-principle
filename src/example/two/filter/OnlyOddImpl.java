@@ -14,5 +14,4 @@ public class OnlyOddImpl implements FilterNumbers {
 			}
 		}
 	}
-
 }

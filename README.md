@@ -28,8 +28,35 @@ The problem of this, when we need to add a new option of Filter or Order, we nee
 
 Another example of risk is when a bug is found in one of these conditionals. Fixing this bug can put the other part of the system at risk. 
 
+We can minimize these problems by creating classes with a single responsibility. In example Two, we created responsible classes to Order and Filter the numbers. The class that applies the rule only execute a method defined on a Interface. Because of this, will rarely need changes, in other words, it's closed for modification.
+ 
+When we need create a new option of Order or Filter, it is necessary to create a new class with this responsibility and implement the Interface defined to use in the centralizing class (NumberOrganizerTwo). That way we have less risk of creating new bugs in others part of application. Moreover, eventual maintenance is more simple and applied in the exact problem context.
 
-#### Class Diagram
+```
+public interface FilterNumbers {
+	void filter(List<Integer> numbers);
+}
 
+public class OnlyEvenImpl implements FilterNumbers {
+
+	public void filter(List<Integer> numbers) {
+		// some code...
+	}
+}
+
+public class OnlyOddImpl implements FilterNumbers {
+
+	public void filter(List<Integer> numbers) {
+		// some code...
+	}
+}
+
+```
+
+#### Class Diagram - Example One
+![My image](https://github.com/augustocolombelli/solid-open-closed-principle/blob/master/ClassDiagramOne.png)
+
+#### Class Diagram - Example Two
+![My image](https://github.com/augustocolombelli/solid-open-closed-principle/blob/master/ClassDiagramTwo.png)
 
 

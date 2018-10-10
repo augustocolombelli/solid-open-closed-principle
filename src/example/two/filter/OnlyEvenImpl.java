@@ -14,5 +14,4 @@ public class OnlyEvenImpl implements FilterNumbers {
 			}
 		}
 	}
-
 }
