@@ -24,6 +24,9 @@ public void process(List<Integer> numbers) {
 	}
 }
 ```
+The problem of this, when we need to add a new option of Filter or Order, we need to change the code that is used in other parts of the software. In this example it is simple, but in production our functional code could presents bugs.
+
+Another example of risk is when a bug is found in one of these conditionals. Fixing this bug can put the other part of the system at risk. 
 
 
 #### Class Diagram
