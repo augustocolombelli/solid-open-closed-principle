@@ -24,10 +24,6 @@ public void process(List<Integer> numbers) {
 	}
 }
 ```
-The problem of this, when we need to add a new option of Filter or Order, we need to change the code that is used in other parts of the software. In this example it is simple, but in production our functional code could presents bugs.
-
-Another example of risk is when a bug is found in one of these conditionals. Fixing this bug can put the other part of the system at risk. 
-
 We can minimize these problems by creating classes with a single responsibility. In example Two, we created responsible classes to Order and Filter the numbers. The class that applies the rule only execute a method defined on a Interface. Because of this, will rarely need changes, in other words, it's closed for modification.
  
 When we need create a new option of Order or Filter, it is necessary to create a new class with this responsibility and implement the Interface defined to use in the centralizing class (NumberOrganizerTwo). That way we have less risk of creating new bugs in others part of application. Moreover, eventual maintenance is more simple and applied in the exact problem context.
